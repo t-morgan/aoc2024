@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	mulRegexp = regexp.MustCompile(`mul\((\d+),(\d+)\)`)
+	mulRegexp        = regexp.MustCompile(`mul\((\d+),(\d+)\)`)
 	mulEnabledRegexp = regexp.MustCompile(`mul\((\d+),(\d+)\)|do\(\)|don\'t\(\)`)
 )
 
