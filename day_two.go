@@ -6,8 +6,6 @@ import (
 	"io"
 	"os"
 	"slices"
-	"strconv"
-	"strings"
 )
 
 func dayTwo() {
@@ -99,17 +97,4 @@ func getIsSafe(levels []int) bool {
 		}
 	}
 	return isSafe
-}
-
-func parseInts(line string) []int {
-	var nums []int
-	strNums := strings.Fields(line)
-	for _, strNum := range strNums {
-		num, err := strconv.Atoi(strNum)
-		if err != nil {
-			continue // Skip non-integer values
-		}
-		nums = append(nums, num)
-	}
-	return nums
 }

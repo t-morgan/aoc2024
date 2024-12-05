@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 )
@@ -15,21 +14,6 @@ func dayFour() {
 	wordsearch := makeWordsearch(lines)
 	getXmasCount(wordsearch)
 	getXMASCount(wordsearch)
-}
-
-func getFileLines(file *os.File) []string {
-	var lines []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		lines = append(lines, line)
-	}
-
-	if err := scanner.Err(); err != nil {
-		panic(err)
-	}
-
-	return lines
 }
 
 func makeWordsearch(lines []string) [][]rune {
@@ -169,7 +153,7 @@ func getSquares(wordsearch [][]rune) [][][]rune {
 	for i := 0; i < len(wordsearch)-2; i++ {
 		for j := 0; j < len(wordsearch[0])-2; j++ {
 			var square [][]rune
-			for _, row := range wordsearch[i:i+3] {
+			for _, row := range wordsearch[i : i+3] {
 				square = append(square, row[j:j+3])
 			}
 			squares = append(squares, square)

@@ -9,12 +9,6 @@ import (
 	"strings"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
 func dayOne() {
 	file, err := os.Open("./inputs/input_day_1.txt")
 	check(err)
