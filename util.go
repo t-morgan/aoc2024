@@ -40,3 +40,12 @@ func parseInts(line string) []int {
 	}
 	return nums
 }
+
+func copy2DStringSlice(src [][]string) [][]string {
+	dst := make([][]string, len(src))
+	for i := range src {
+		dst[i] = make([]string, len(src[i]))
+		copy(dst[i], src[i])
+	}
+	return dst
+}
