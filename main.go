@@ -25,6 +25,8 @@ func main() {
 		dayFive()
 	case "6":
 		daySix()
+	case "7":
+		daySeven()
 	default:
 		fmt.Println("Invalid argument:", arg)
 	}

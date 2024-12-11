@@ -6,24 +6,12 @@ import (
 	"strings"
 )
 
-var simpleInput = `....#.....
-.........#
-..........
-..#.......
-.......#..
-..........
-.#..^.....
-........#.
-#.........
-......#...`
-
 func daySix() {
 	file, err := os.Open("./inputs/input_day_6.txt")
 	check(err)
 	defer file.Close()
 
 	lines := getFileLines(file)
-	// lines := strings.Split(simpleInput, "\n")
 	var guardMap [][]string
 	for _, line := range lines {
 		guardMap = append(guardMap, strings.Split(line, ""))
